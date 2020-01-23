@@ -1,9 +1,31 @@
+
 .Salad {
     text-align: center;
 }
 
 .Plate {
-    width: 50%;
-    height: 50%;
-    border-radius: 50px;
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: 25px auto;
+    border-radius: 999em;
+    background-color: rgb(226,225,231);
+    box-shadow: 0 -30px 30px -10px rgba(0,0,0,1),
+    0 0 8px 1px rgba(255,255,255,1) inset;
 }
+    
+.PlateInner {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    display: block;
+    border-radius: 999em;
+    box-shadow:
+    0 20px 10px -5px rgba(255,255,255,.5) inset,
+    0 -20px 10px -5px rgba(0,0,0,.5) inset;
+}
+
+  

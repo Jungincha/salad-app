@@ -1,12 +1,29 @@
 import React from 'react';
 import classes from './Salad.module.css';
+import SaladIngredient from './SaladIngredient/SaladIngredient';
 
 
 const Salad = (props) => {
+
+    let selectedIngredients = Object.keys(props.ingredients)
+                                .map(igKey => {
+                                    return [...Array(props.ingredients[igKey])].map((_, i) => {
+                                        return < SaladIngredient key={igKey + i} type={igKey}/>
+                                    })
+                                })
+                                .reduce((arr, el) => arr.concat(el), [])
+
+    if (selectedIngredients.length === 0) {
+        selectedIngredients = <p>Please start adding ingredients!</p>;
+    }
     return (
         <div className={classes.Salad}>
+            <div className={classes.Plate}>
+                <div className={classes.PlateInner}>
 
-            <img className={classes.Plate} src="https://target.scene7.com/is/image/Target/GUEST_ae819d39-43d0-4927-a55d-ea36ade0e33d?wid=488&hei=488&fmt=pjpeg" alt='saladPlate'/>
+                </div>
+                { selectedIngredients }
+            </div>    
         </div>
     );
 }

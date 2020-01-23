@@ -4,7 +4,7 @@ import SaladControl from './SaladControl/SaladControl';
 
 const controls = [
     {label: 'Lettuce', type: 'lettuce'},
-    {label: 'Chicken', type: 'chicken'},
+    {label: 'Egg', type: 'egg'},
     {label: 'Tomato', type: 'tomato'},
     {label: 'Cucumber', type: 'cucumber'},
     {label: 'Avocado', type: 'avocado'}
